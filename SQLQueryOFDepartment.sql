@@ -1,0 +1,21 @@
+USE [PersonalDB]
+GO
+
+/****** Object:  Table [dbo].[Department]    Script Date: 2/1/2020 1:52:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Department](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DepartmentName] [nvarchar](50) NULL,
+ CONSTRAINT [PK__Departme__3214EC27EC1C4A03] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
