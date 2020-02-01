@@ -1,0 +1,35 @@
+﻿@model PersonalMVCCRUD.Models.User
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="container">
+        <h2>Welcome Please Enter Your Credentials</h2>
+
+        @ViewBag.Message
+        @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+        {
+
+            <div class="form-group">
+
+
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "User Name" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+
+            </div>
+            <button type="submit" class"btn btn-block btn-success">Sign in</button>
+
+
+
+
+        }
+    </div>
+
