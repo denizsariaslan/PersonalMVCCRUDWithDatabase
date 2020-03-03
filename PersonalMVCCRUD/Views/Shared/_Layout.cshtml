@@ -17,15 +17,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Employee Departments Management","index", "Departments", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Employee Departments Management", "index", "Departments", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
 
                     <li>@Html.ActionLink("Departments", "index", "Departments")</li>
                     <li>@Html.ActionLink("Personals", "index", "Personals")</li>
-                    <li>@Html.ActionLink("User", "index", "User")</li>
-                    <li>@Html.ActionLink("Log out", "Login", "Security")</li>
+                    <li>@Html.ActionLink("User", "index", "User", new { area = "" }, new { @class="glyphicon glyphicon-user" })</li>
+                    <li>@Html.ActionLink("Log out", "Login", "Security", new { area = "" }, new { @class = "glyphicon glyphicon-log-out"})</li>
 
 
 
@@ -37,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Demo Application</p>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Test Application</p>
         </footer>
     </div>
 

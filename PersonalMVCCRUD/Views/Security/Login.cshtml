@@ -2,13 +2,29 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
-
-
+<html lang="en">
+<head>
+    <title>Sign In Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand " href="#"></a>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
-        <h2>Welcome Please Enter Your Credentials</h2>
+        <h2>Welcome, Please Enter Your Credentials</h2>
 
         @ViewBag.Message
         @using (Html.BeginForm("Login", "Security", FormMethod.Post))
@@ -25,6 +41,9 @@
                 @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
 
             </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
             <button type="submit" class"btn btn-block btn-success">Sign in</button>
 
 
@@ -33,3 +52,5 @@
         }
     </div>
 
+</body>
+</html>
